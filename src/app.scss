@@ -18,7 +18,7 @@
         overflow-x: auto;
         overflow-y: hidden;
         display: flex;
-
+        
         
         
         section{
@@ -29,19 +29,19 @@
             scroll-snap-align: start;
             
             &:nth-of-type(1){
-                background: linear-gradient(90deg, hsl(220, 13%, 18%) 0%, hsl(200, 13%, 18%) 100%);
+                background-color: rgb(128, 128, 128);
             }
             
             &:nth-of-type(2){
-                background: linear-gradient(90deg, hsl(200, 13%, 18%) 0%, hsl(180, 13%, 18%) 100%);
+                background: linear-gradient(90deg, hsl(200, 57%, 53%) 33%, hsl(200, 64%, 33%) 90%);
             }
             
             &:nth-of-type(3){
-                background: linear-gradient(90deg, hsl(180, 13%, 18%) 0%, hsl(160, 13%, 18%) 100%);
+                background: linear-gradient(75deg, hsl(200, 64%, 33%) 15%, hsl(200, 57%, 53%) 75%);
             }
             
             &:nth-of-type(4){
-                background: linear-gradient(90deg, hsl(160, 13%, 18%) 0%, hsl(160, 13%, 18%) 100%);
+                background: linear-gradient(285deg, hsl(200, 64%, 33%) 15%, hsl(200, 57%, 53%) 75%);
             }
             
             h1{
@@ -62,9 +62,11 @@
     grid-template-areas: 
     'a a a a a a a'
     'b c c c c c d'
+    'b c c c c c d'
+    'b c c c c c d'
     'e e e e e e e';
 
-    grid-template-rows: repeat(3, 33%);
+    grid-template-rows: repeat(5, 20%);
 
     h1{
         grid-area: a;
@@ -80,6 +82,13 @@
         grid-area: d;
     }
 
+    .middle-content{
+        grid-area:c;
+    }
+
+    .home-page-icons{
+        grid-area: e;
+    }
 }
 
 .page-btn{
@@ -89,6 +98,7 @@
     border-width: 0;
     background-color: rgba(255, 255, 255, 0.30);
     box-shadow: 0 0 1.5rem 0 rgba(255, 255, 255, 0.20);
+    padding: 0;
 }
 
 .page-btn:hover{
@@ -101,7 +111,6 @@
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
-    
 }
 
 .right {
@@ -110,4 +119,28 @@
 
 .left {
     transform: rotate(135deg);
+}
+
+#animation-container{
+    position: absolute;
+    z-index: 100;
+}
+
+.display-none{
+    display: none;
+}
+
+img{
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+}
+
+.home-page-icons{
+    display: grid;
+    place-items: center;
+    grid-template-areas: 
+    'a b c';
+    max-width: 50vw;
+    min-width: 30vw;
 }

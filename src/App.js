@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useRef} from "react"
-import {HomePage, AboutMe, Skills, ContactMe} from './Pages'
+import {HomePage, AboutMe, Skills, ContactMe, AnimationHome} from './Pages'
 
 function App() {
 
@@ -22,6 +22,7 @@ function App() {
     <div className="App">
       <div ref={posRef} className="container">
         <section ref={homePageRef} >
+          <AnimationHome />
           <HomePage package={{aboutMeRef, goToLocation}} />
         </section>
 
