@@ -6,10 +6,10 @@ export default function AboutMe(props) {
         <div className="page-container">
             <h1>About Me</h1>
             <button className="prev-page-btn page-btn" onClick={() => goToLocation(homePageRef)}>
-            <i class="arrow left"></i>
+            <i className="arrow left"></i>
             </button>
             <button className="next-page-btn page-btn" onClick={() => goToLocation(skillsRef)}>
-            <i class="arrow right"></i>
+            <i className="arrow right"></i>
             </button>
 
         </div>
