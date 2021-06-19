@@ -13,7 +13,7 @@
     .container{
         width: 100%;
         height: 100%;
-        scroll-snap-type: x proximity;
+        scroll-snap-type: x mandatory;
         // change overflow-x to hidden to take away bar
         overflow-x: auto;
         overflow-y: hidden;
@@ -82,14 +82,12 @@
         grid-area: d;
     }
 
-    .middle-content{
+    .middle-container{
         grid-area:c;
     }
-
-    .home-page-icons{
-        grid-area: e;
-    }
 }
+
+
 
 .page-btn{
     width: 3rem;
@@ -149,6 +147,7 @@
 }
 
 .display-none{
+    visibility:hidden;
     display: none;
 }
 
@@ -159,52 +158,102 @@ img{
 }
 
 .home-page-icons{
-    display: grid;
-    place-items: center;
-    grid-template-areas: 
-    'a b c';
-    max-width: 50vw;
-    min-width: 30vw;
+    // display: grid;
+    // place-items: center;
+    // grid-template-areas: 
+    // 'a'
+    // 'b'
+    // 'c';
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 3rem;
+    height: 9rem;
 
     button{
-        background-color: none;
+        flex: 1;
         border: none;
-        padding: 0;
-        width: 3rem;
-        height: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
         border-radius:5px;
+        padding: 0;
+        svg{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
     }
     
-    .github-btn{
-        box-shadow: 0 0 1.5rem 3px rgba(255, 255, 255, 0.5);
-        background-color: black;
-        :hover{
-            box-shadow: 0 0 1.75rem 3px rgba(255, 255, 255, 0.55);
+    :hover{
+        position: relative;
+        z-index: 11;
+        width: 3rem;
+        height: 3rem;
+        svg{
+            width: 3rem;
+            height: 3rem; 
         }
+    }
+
+    .github-btn{
+        background-color: black;
+
         svg{
             color: white;
+
         }
     }
     
     .linkedin-btn{
         color: rgb(0, 119, 181);
-        box-shadow: 0 0 1.5rem 3px rgba(0, 119, 181, 0.6);
         :hover{
-            box-shadow: 0 0 1.75rem 3px rgba(0, 119, 181, 0.75);
+            
         }
     }
     
     .mail-btn{
         color: rgb(255, 0, 0);
-        box-shadow: 0 0 1.5rem 3px rgba(255, 0, 0, 0.5);
         :hover{
-            box-shadow: 0 0 1.75rem 3px rgba(255, 0, 0, 0.55);
+
         }
     }
     
     svg{
-        width: 3rem;
-        height: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
 }
+
+.middle-container{
+    box-shadow: 0 0 1.5rem 3px rgba(0, 0, 0, 0.5);
+    background-color: rgb(255, 255, 255);
+    width: 50vw;
+    height: 33vh;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    p{
+        font-size: 100%;
+        margin: 0;
+    }
+    color: black;
+}
+
+
+.home-page-icons{
+    overflow: hidden;
+    position: absolute;
+    left: 1rem;
+    bottom: 2rem;
+    // left: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .middle-container{
+        width: 75vw;
+    }
+    .page-btn{
+        display: none;
+    }
+  }

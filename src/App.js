@@ -2,6 +2,9 @@ import './App.css';
 import React, {useRef} from "react"
 import {HomePage, AboutMe, Skills, ContactMe, AnimationHome} from './Pages'
 
+import {SiGmail} from 'react-icons/si'
+import {FaGithub, FaLinkedin } from 'react-icons/fa'
+
 function App() {
 
   const posRef = useRef(null)
@@ -18,13 +21,27 @@ function App() {
     })
   }
 
+
+
+
   return (
     <div className="App">
       <div ref={posRef} className="container">
+      <div className="home-page-icons">
+            <button className="github-btn" onClick={() => console.log('hi')} >
+                <FaGithub />
+            </button>
+            <button className="linkedin-btn">
+                <FaLinkedin />
+            </button>
+            <button className="mail-btn">
+                <SiGmail />
+            </button>
+        </div>
         <section ref={homePageRef} >
           <AnimationHome />
           <HomePage package={{aboutMeRef, goToLocation}} />
-        </section>
+          </section>
 
         <section ref={aboutMeRef}>
           <AboutMe package={{homePageRef, skillsRef, goToLocation}} />
