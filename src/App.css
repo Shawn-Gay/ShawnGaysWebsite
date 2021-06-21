@@ -62,6 +62,7 @@
   display: -ms-grid;
   display: grid;
   place-items: center;
+  position: relative;
       grid-template-areas: 'a a a a a a a' 'b c c c c c d' 'b c c c c c d' 'b c c c c c d' 'e e e e e e e';
   -ms-grid-rows: (20%)[5];
       grid-template-rows: repeat(5, 20%);
@@ -171,6 +172,8 @@ img {
 }
 
 .home-page-icons {
+  position: relative;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,6 +246,7 @@ img {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  position: relative;
   color: black;
 }
 
@@ -265,5 +269,24 @@ img {
   .page-btn {
     display: none;
   }
+}
+
+.custom-shape-divider-top-1624229019 {
+  right: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 112.6px;
+  overflow: hidden;
+}
+
+.custom-shape-divider-top-1624229019 svg {
+  position: relative;
+  height: calc(100%);
+  width: 112.6px;
+}
+
+.custom-shape-divider-top-1624229019 .shape-fill {
+  fill: #fad8d8;
 }
 /*# sourceMappingURL=app.css.map */

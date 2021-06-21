@@ -41,7 +41,8 @@ function App() {
         <section ref={homePageRef} >
           <AnimationHome />
           <HomePage package={{aboutMeRef, goToLocation}} />
-          </section>
+
+        </section>
 
         <section ref={aboutMeRef}>
           <AboutMe package={{homePageRef, skillsRef, goToLocation}} />
